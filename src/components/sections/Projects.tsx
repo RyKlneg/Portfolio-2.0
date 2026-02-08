@@ -1,108 +1,158 @@
 "use client";
-
-import React from "react";
 import { Section } from "@/src/components/ui/Section";
-import { ExternalLink, Github } from "lucide-react";
+import React from "react";
+import Slider from "react-slick";
+import { motion } from "framer-motion";
+import { ExternalLink, Github, Code2 } from "lucide-react";
 
 const projects = [
   {
-    title: "FinTech Dashboard",
-    category: "Web Application",
-    description: "A comprehensive financial analytics dashboard featuring real-time data visualization, dark mode support, and secure user authentication.",
-    image: "https://images.unsplash.com/photo-1575388902449-6bca946ad549?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkYXNoYm9hcmQlMjBkYXJrJTIwbW9kZSUyMHVpJTIwZGVzaWdufGVufDF8fHx8MTc3MDIyNjI0MXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    tech: ["React", "TypeScript", "D3.js", "Firebase"],
-    links: { demo: "#", code: "#" }
-  },
-  {
     title: "E-Commerce Platform",
-    category: "Full Stack",
-    description: "Modern e-commerce solution with cart functionality, payment gateway integration, and inventory management system.",
-    image: "https://images.unsplash.com/photo-1476885084911-210727f73472?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHAlMjBpbnRlcmZhY2UlMjBkYXJrJTIwZWxlZ2FudHxlbnwxfHx8fDE3NzAyMjYyNDV8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    tech: ["Next.js", "Stripe", "Prisma", "PostgreSQL"],
-    links: { demo: "#", code: "#" }
+    description: "A full-featured online store built with Next.js, Stripe integration, and a headless CMS backend.",
+    tags: ["React", "Next.js", "Stripe", "Tailwind"],
+    image: "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&q=80",
+    github: "#",
+    live: "#"
   },
   {
     title: "AI Task Manager",
-    category: "Productivity",
-    description: "Smart task management application that uses AI to prioritize daily activities and suggest optimal schedules.",
-    image: "https://images.unsplash.com/photo-1649451844813-3130d6f42f8a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9ncmFtbWVyJTIwY29kaW5nJTIwZGFyayUyMGFlc3RoZXRpYyUyMGJsdWV8ZW58MXx8fHwxNzcwMjI2MTgwfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    tech: ["Python", "React", "OpenAI API", "FastAPI"],
-    links: { demo: "#", code: "#" }
+    description: "Smart productivity app using OpenAI API to prioritize and categorize daily tasks automatically.",
+    tags: ["TypeScript", "OpenAI", "Node.js", "MongoDB"],
+    image: "https://images.unsplash.com/photo-1661956602116-aa6865609028?w=800&q=80",
+    github: "#",
+    live: "#"
+  },
+  {
+    title: "Crypto Dashboard",
+    description: "Real-time cryptocurrency tracker with interactive charts and portfolio management features.",
+    tags: ["React", "Recharts", "WebSocket", "Redux"],
+    image: "https://images.unsplash.com/photo-1621761191319-c6fb62004040?w=800&q=80",
+    github: "#",
+    live: "#"
+  },
+  {
+    title: "Social Media App",
+    description: "A community platform for developers to share snippets and discuss code.",
+    tags: ["Vue", "Firebase", "SCSS", "Jest"],
+    image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&q=80",
+    github: "#",
+    live: "#"
   }
 ];
 
 export const Projects = () => {
-  return (
-    <div className="bg-neutral-950 py-10">
-      <Section id="projects" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-12">
-          <div className="mb-6 md:mb-0">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Featured <span className="text-green-500">Projects</span>
-            </h2>
-            <p className="text-gray-400 max-w-xl">
-              A selection of projects that demonstrate my passion for building solving real-world problems.
-            </p>
-          </div>
-          <a href="#" className="text-green-500 hover:text-green-400 font-medium flex items-center gap-2 group">
-            View Github <ExternalLink className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </a>
-        </div>
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    arrows: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false // Hide arrows on mobile for cleaner UI
+        }
+      }
+    ]
+  };
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
-            <div 
-              key={index}
-              className="group rounded-2xl overflow-hidden bg-neutral-900 border border-white/5 hover:border-green-500/30 transition-all duration-300 hover:shadow-2xl hover:shadow-green-900/10 hover:-translate-y-2"
-            >
-              <div className="relative h-48 overflow-hidden">
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors z-10" />
-                <img 
-                  src={project.image} 
-                  alt={project.title}
-                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
-                />
-              </div>
-              
-              <div className="p-6">
-                <div className="flex justify-between items-start mb-4">
-                  <div>
-                    <span className="text-xs font-semibold text-green-500 uppercase tracking-wider">
-                      {project.category}
-                    </span>
-                    <h3 className="text-xl font-bold text-white mt-1 group-hover:text-green-400 transition-colors">
-                      {project.title}
+  return (
+    <Section id="projects" className="bg-black py-20 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
+            Featured <span className="text-red-600">Projects</span>
+          </h2>
+          <p className="text-gray-400 max-w-2xl mx-auto text-lg">
+            A selection of my recent work, ranging from web applications to system tools.
+          </p>
+        </motion.div>
+
+        {/* Carousel Container */}
+        <div className="mx-auto px-4">
+            <style>{`
+                .slick-dots li button:before {
+                    color: #4b5563;
+                }
+                .slick-dots li.slick-active button:before {
+                    color: #dc2626;
+                }
+                .slick-prev:before, .slick-next:before {
+                    color: #dc2626;
+                }
+                .slick-slide {
+                    padding: 0 10px;
+                }
+            `}</style>
+            
+            <Slider {...settings}>
+            {projects.map((project, index) => (
+                <div key={index} className="h-full py-4">
+                <div className="bg-[#0a0a0a] rounded-xl overflow-hidden border border-white/5 hover:border-red-500/50 transition-all duration-300 group h-full flex flex-col">
+                    <div className="relative h-48 overflow-hidden">
+                    <div className="absolute inset-0 bg-red-900/10 group-hover:bg-transparent transition-colors z-10" />
+                    <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                    />
+                    </div>
+                    
+                    <div className="p-6 flex flex-col flex-grow">
+                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-red-500 transition-colors">
+                        {project.title}
                     </h3>
-                  </div>
-                  <div className="flex gap-2">
-                    <a href={project.links.code} className="p-2 bg-white/5 hover:bg-white/10 rounded-full text-gray-400 hover:text-white transition-colors">
-                      <Github className="w-4 h-4" />
-                    </a>
-                    <a href={project.links.demo} className="p-2 bg-white/5 hover:bg-white/10 rounded-full text-gray-400 hover:text-white transition-colors">
-                      <ExternalLink className="w-4 h-4" />
-                    </a>
-                  </div>
+                    <p className="text-gray-400 mb-6 flex-grow">
+                        {project.description}
+                    </p>
+                    
+                    <div className="flex flex-wrap gap-2 mb-6">
+                        {project.tags.map((tag, i) => (
+                        <span 
+                            key={i} 
+                            className="text-xs px-3 py-1 bg-red-500/10 text-red-400 rounded-full border border-red-500/20"
+                        >
+                            {tag}
+                        </span>
+                        ))}
+                    </div>
+                    
+                    <div className="flex items-center gap-4 mt-auto">
+                        <a href={project.github} className="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors">
+                        <Github className="w-4 h-4" />
+                        Code
+                        </a>
+                        <a href={project.live} className="flex items-center gap-2 text-sm text-red-500 hover:text-red-400 transition-colors">
+                        <ExternalLink className="w-4 h-4" />
+                        Live Demo
+                        </a>
+                    </div>
+                    </div>
                 </div>
-                
-                <p className="text-gray-400 text-sm mb-6 line-clamp-3">
-                  {project.description}
-                </p>
-                
-                <div className="flex flex-wrap gap-2">
-                  {project.tech.map((tech, idx) => (
-                    <span 
-                      key={idx} 
-                      className="text-xs px-3 py-1 bg-green-500/10 text-green-400 rounded-full border border-green-500/10"
-                    >
-                      {tech}
-                    </span>
-                  ))}
                 </div>
-              </div>
-            </div>
-          ))}
+            ))}
+            </Slider>
         </div>
-      </Section>
-    </div>
+      </div>
+    </Section>
   );
 };
