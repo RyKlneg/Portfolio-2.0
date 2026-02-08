@@ -47,7 +47,7 @@ export const InteractiveBackground = () => {
 
       draw() {
         if (!ctx) return;
-        ctx.fillStyle = "#16a34a"; // Strong Green (Tailwind green-600)
+        ctx.fillStyle = "#dc2626"; // Strong Red (Tailwind red-600)
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();
@@ -96,7 +96,7 @@ export const InteractiveBackground = () => {
           const distance = Math.sqrt(dx * dx + dy * dy);
 
           if (distance < maxDistance) {
-            ctx.strokeStyle = `rgba(22, 163, 74, ${1 - distance / maxDistance})`; // Green fading
+            ctx.strokeStyle = `rgba(220, 38, 38, ${1 - distance / maxDistance})`; // Red fading
             ctx.lineWidth = 1;
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
@@ -111,7 +111,7 @@ export const InteractiveBackground = () => {
         const distance = Math.sqrt(dx * dx + dy * dy);
 
         if (distance < mouseDistance) {
-            ctx.strokeStyle = `rgba(22, 163, 74, ${1 - distance / mouseDistance})`;
+            ctx.strokeStyle = `rgba(220, 38, 38, ${1 - distance / mouseDistance})`;
             ctx.lineWidth = 1.5;
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);

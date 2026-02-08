@@ -4,6 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
 import { InteractiveBackground } from "@/src/components/effects/InteractiveBackground";
+import { TypewriterEffect } from "@/src/components/effects/TypewriterEffect";
 
 export const Hero = () => {
   return (
@@ -23,8 +24,8 @@ export const Hero = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-green-500 font-semibold tracking-wide uppercase text-sm md:text-base mb-4">
-            Full Stack Developer
+          <h2 className="text-red-500 font-semibold tracking-wide uppercase text-sm md:text-base mb-4">
+            Hello, World! I am
           </h2>
         </motion.div>
         
@@ -32,9 +33,9 @@ export const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight"
+          className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 tracking-tight min-h-[1.2em]"
         >
-          Building Digital <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-700">Experiences</span>
+          <TypewriterEffect text="Full Stack Developer" speed={100} />
         </motion.h1>
 
         <motion.p
@@ -43,8 +44,8 @@ export const Hero = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-10 leading-relaxed"
         >
-          I craft robust, scalable, and elegant web solutions using modern technologies. 
-          Focusing on performance, interaction, and clean code.
+          Building digital experiences with clean code and modern technologies. 
+          Focused on creating fluid, interactive, and performant web applications.
         </motion.p>
 
         <motion.div
@@ -55,14 +56,14 @@ export const Hero = () => {
         >
           <a
             href="#projects"
-            className="px-8 py-4 bg-green-600 hover:bg-green-700 text-white font-medium rounded-full transition-all duration-300 transform hover:scale-105 flex items-center gap-2 group shadow-[0_0_20px_rgba(22,163,74,0.3)] hover:shadow-[0_0_30px_rgba(22,163,74,0.5)]"
+            className="px-8 py-4 bg-red-600 hover:bg-red-700 text-white font-medium rounded-full transition-all duration-300 transform hover:scale-105 flex items-center gap-2 group shadow-[0_0_20px_rgba(220,38,38,0.3)] hover:shadow-[0_0_30px_rgba(220,38,38,0.5)]"
           >
             View Work
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </a>
           <a
             href="#contact"
-            className="px-8 py-4 bg-transparent border border-gray-600 hover:border-white text-gray-300 hover:text-white font-medium rounded-full transition-all duration-300"
+            className="px-8 py-4 bg-transparent border border-gray-600 hover:border-red-500 text-gray-300 hover:text-red-400 font-medium rounded-full transition-all duration-300"
           >
             Contact Me
           </a>
@@ -82,7 +83,7 @@ export const Hero = () => {
             <a
               key={index}
               href={item.href}
-              className="p-3 bg-white/5 hover:bg-white/10 rounded-full text-gray-400 hover:text-green-400 transition-colors border border-white/5 hover:border-green-500/30"
+              className="p-3 bg-white/5 hover:bg-white/10 rounded-full text-gray-400 hover:text-red-400 transition-colors border border-white/5 hover:border-red-500/30"
             >
               <item.icon className="w-6 h-6" />
             </a>
