@@ -5,7 +5,7 @@ import { Section } from "@/src/components/ui/Section";
 
 export const About = () => {
   return (
-    <div className="bg-red-950">
+    <div className="bg-black">
       <Section id="about" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center gap-12 md:gap-20">
           <div className="w-full md:w-1/2 relative group">
