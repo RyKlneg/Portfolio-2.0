@@ -8,13 +8,13 @@ import { TypewriterEffect } from "@/src/components/effects/TypewriterEffect";
 
 export const Hero = () => {
   return (
-    <div id="home" className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden bg-black">
+    <div id="home" className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden bg-red-950">
       {/* Interactive Background */}
       <InteractiveBackground />
       
       {/* Gradient Overlay for bottom fade only, allowing animation to be visible */}
       <div className="absolute inset-0 z-10 pointer-events-none">
-        <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-black to-transparent" />
+        <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-red-950 to-transparent" />
       </div>
 
       {/* Content */}
@@ -92,7 +92,7 @@ export const Hero = () => {
       </div>
 
       {/* Decorative Blur */}
-      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-black to-transparent z-20 pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-red-950 to-transparent z-20 pointer-events-none" />
     </div>
   );
 };

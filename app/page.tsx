@@ -12,7 +12,7 @@ import { CustomCursor } from "@/src/components/effects/CustomCursor";
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-black text-white selection:bg-red-500/30 selection:text-red-200 cursor-none">
+    <div className="min-h-screen bg-red-950 text-white selection:bg-red-500/30 selection:text-red-200 cursor-none">
       <style>{`
         html {
           scroll-behavior: smooth;
@@ -22,7 +22,7 @@ export default function App() {
           width: 10px;
         }
         ::-webkit-scrollbar-track {
-          background: #000;
+          background: #7f1d1d;
         }
         ::-webkit-scrollbar-thumb {
           background: #dc2626;

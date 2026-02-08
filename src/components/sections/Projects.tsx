@@ -70,7 +70,7 @@ export const Projects = () => {
   };
 
   return (
-    <Section id="projects" className="bg-black py-20 overflow-hidden">
+    <Section id="projects" className="bg-red-950 py-20 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

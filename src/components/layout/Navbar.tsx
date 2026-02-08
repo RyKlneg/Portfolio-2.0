@@ -31,14 +31,14 @@ export const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-black/80 backdrop-blur-md border-b border-green-900/30" : "bg-transparent"
+        scrolled ? "bg-red-950/80 backdrop-blur-md border-b border-red-800/30" : "bg-transparent"
       }`}
     >
-      <div className="absolute bottom-0 left-0 h-[1px] bg-green-600 transition-all duration-100 ease-out" style={{ width: `${scrollProgress * 100}%` }} />
+      <div className="absolute bottom-0 left-0 h-[1px] bg-red-600 transition-all duration-100 ease-out" style={{ width: `${scrollProgress * 100}%` }} />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0 flex items-center">
-            <a href="#" className="flex items-center gap-2 text-green-500 font-bold text-xl">
+            <a href="#" className="flex items-center gap-2 text-red-500 font-bold text-xl">
               <Code2 className="w-8 h-8" />
               <span>DEV.PORTFOLIO</span>
             </a>
@@ -50,7 +50,7 @@ export const Navbar = () => {
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-gray-300 hover:text-green-400 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+                  className="text-gray-300 hover:text-red-400 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
                 >
                   {link.name}
                 </a>
@@ -75,7 +75,7 @@ export const Navbar = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-black/95 backdrop-blur-lg border-b border-green-900/30"
+            className="md:hidden bg-red-950/95 backdrop-blur-lg border-b border-red-800/30"
           >
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
               {navLinks.map((link) => (
@@ -83,7 +83,7 @@ export const Navbar = () => {
                   key={link.name}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
-                  className="text-gray-300 hover:text-green-400 block px-3 py-2 rounded-md text-base font-medium"
+                  className="text-gray-300 hover:text-red-400 block px-3 py-2 rounded-md text-base font-medium"
                 >
                   {link.name}
                 </a>
