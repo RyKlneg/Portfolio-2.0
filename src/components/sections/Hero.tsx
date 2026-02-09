@@ -8,13 +8,13 @@ import { TypewriterEffect } from "@/src/components/effects/TypewriterEffect";
 
 export const Hero = () => {
   return (
-    <div id="home" className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden bg-red-950">
+    <div id="home" className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden bg-black">
       {/* Interactive Background */}
       <InteractiveBackground />
       
       {/* Gradient Overlay for bottom fade only, allowing animation to be visible */}
       <div className="absolute inset-0 z-10 pointer-events-none">
-        <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-red-950 to-transparent" />
+        <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-black to-transparent" />
       </div>
 
       {/* Content */}
@@ -24,7 +24,7 @@ export const Hero = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-red-500 font-semibold tracking-wide uppercase text-sm md:text-base mb-4">
+          <h2 className="text-white font-semibold tracking-wide uppercase text-sm md:text-base mb-4">
             Hello, World! I am
           </h2>
         </motion.div>
@@ -56,14 +56,14 @@ export const Hero = () => {
         >
           <a
             href="#projects"
-            className="px-8 py-4 bg-red-600 hover:bg-red-700 text-white font-medium rounded-full transition-all duration-300 transform hover:scale-105 flex items-center gap-2 group shadow-[0_0_20px_rgba(220,38,38,0.3)] hover:shadow-[0_0_30px_rgba(220,38,38,0.5)]"
+            className="px-8 py-4 bg-white hover:bg-gray-200 text-black font-medium rounded-full transition-all duration-300 transform hover:scale-105 flex items-center gap-2 group shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.5)]"
           >
             View Work
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </a>
           <a
             href="#contact"
-            className="px-8 py-4 bg-transparent border border-gray-600 hover:border-red-500 text-gray-300 hover:text-red-400 font-medium rounded-full transition-all duration-300"
+            className="px-8 py-4 bg-transparent border border-white hover:border-white text-white hover:text-white font-medium rounded-full transition-all duration-300"
           >
             Contact Me
           </a>
@@ -83,7 +83,7 @@ export const Hero = () => {
             <a
               key={index}
               href={item.href}
-              className="p-3 bg-white/5 hover:bg-white/10 rounded-full text-gray-400 hover:text-red-400 transition-colors border border-white/5 hover:border-red-500/30"
+              className="p-3 bg-white/5 hover:bg-white/10 rounded-full text-gray-400 hover:text-white transition-colors border border-white/5 hover:border-white/30"
             >
               <item.icon className="w-6 h-6" />
             </a>
@@ -92,7 +92,7 @@ export const Hero = () => {
       </div>
 
       {/* Decorative Blur */}
-      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-red-950 to-transparent z-20 pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-black to-transparent z-20 pointer-events-none" />
     </div>
   );
 };

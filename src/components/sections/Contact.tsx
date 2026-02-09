@@ -4,23 +4,23 @@ import { Mail, MapPin, Phone, Send } from "lucide-react";
 
 export const Contact = () => {
   return (
-    <div className="bg-red-950 relative overflow-hidden">
+    <div className="bg-black relative overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-red-600/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+      <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
       
       <Section id="contact" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24">
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Let's Work <span className="text-red-500">Together</span>
+              Let is Work <span className="text-black">Together</span>
             </h2>
             <p className="text-gray-400 text-lg mb-12">
-              Have a project in mind or want to discuss the latest tech? I'm always open to new opportunities and interesting conversations.
+              Have a project in mind or want to discuss the latest tech? I am always open to new opportunities and interesting conversations.
             </p>
             
             <div className="space-y-8">
               <div className="flex items-start gap-4 group">
-                <div className="p-3 bg-red-500/10 rounded-lg text-red-500 group-hover:bg-red-500 group-hover:text-white transition-all duration-300">
+                <div className="p-3 bg-white/10 rounded-lg text-white group-hover:bg-white group-hover:text-black transition-all duration-300">
                   <Mail className="w-6 h-6" />
                 </div>
                 <div>
@@ -30,7 +30,7 @@ export const Contact = () => {
               </div>
               
               <div className="flex items-start gap-4 group">
-                <div className="p-3 bg-red-500/10 rounded-lg text-red-500 group-hover:bg-red-500 group-hover:text-white transition-all duration-300">
+                <div className="p-3 bg-white/10 rounded-lg text-white group-hover:bg-white group-hover:text-black transition-all duration-300">
                   <Phone className="w-6 h-6" />
                 </div>
                 <div>
@@ -40,7 +40,7 @@ export const Contact = () => {
               </div>
               
               <div className="flex items-start gap-4 group">
-                <div className="p-3 bg-red-500/10 rounded-lg text-red-500 group-hover:bg-red-500 group-hover:text-white transition-all duration-300">
+                <div className="p-3 bg-white/10 rounded-lg text-white group-hover:bg-white group-hover:text-black transition-all duration-300">
                   <MapPin className="w-6 h-6" />
                 </div>
                 <div>
@@ -59,7 +59,7 @@ export const Contact = () => {
                   <input 
                     type="text" 
                     placeholder="John Doe"
-                    className="w-full bg-black/50 border border-gray-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-red-500 focus:ring-1 focus:ring-red-500 transition-all"
+                    className="w-full bg-black/50 border border-gray-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition-all"
                   />
                 </div>
                 <div className="space-y-2">
@@ -67,7 +67,7 @@ export const Contact = () => {
                   <input 
                     type="email" 
                     placeholder="john@example.com"
-                    className="w-full bg-black/50 border border-gray-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-red-500 focus:ring-1 focus:ring-red-500 transition-all"
+                    className="w-full bg-black/50 border border-gray-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition-all"
                   />
                 </div>
               </div>
@@ -77,7 +77,7 @@ export const Contact = () => {
                 <input 
                   type="text" 
                   placeholder="Project Inquiry"
-                  className="w-full bg-black/50 border border-gray-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-red-500 focus:ring-1 focus:ring-red-500 transition-all"
+                  className="w-full bg-black/50 border border-gray-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition-all"
                 />
               </div>
               
@@ -86,13 +86,13 @@ export const Contact = () => {
                 <textarea 
                   rows={4}
                   placeholder="Tell me about your project..."
-                  className="w-full bg-black/50 border border-gray-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-red-500 focus:ring-1 focus:ring-red-500 transition-all resize-none"
+                  className="w-full bg-black/50 border border-gray-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition-all resize-none"
                 />
               </div>
               
               <button 
                 type="submit"
-                className="w-full bg-red-600 hover:bg-red-700 text-white font-medium py-4 rounded-lg transition-all duration-300 flex items-center justify-center gap-2 group"
+                className="w-full bg-white hover:bg-gray-200 text-black font-medium py-4 rounded-lg transition-all duration-300 flex items-center justify-center gap-2 group"
               >
                 Send Message
                 <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

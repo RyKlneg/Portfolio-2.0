@@ -26,7 +26,7 @@ export const TypewriterEffect: React.FC<TypewriterEffectProps> = ({ text, speed 
   return (
     <span className={`${className} inline-block`}>
       {displayedText}
-      <span className="animate-pulse ml-1 text-red-500">|</span>
+      <span className="animate-pulse ml-1 text-white">|</span>
     </span>
   );
 };

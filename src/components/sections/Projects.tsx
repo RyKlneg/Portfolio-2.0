@@ -80,7 +80,7 @@ export const Projects = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
-            Featured <span className="text-red-600">Projects</span>
+            Featured <span className="text-black">Projects</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto text-lg">
             A selection of my recent work, ranging from web applications to system tools.
@@ -94,10 +94,10 @@ export const Projects = () => {
                     color: #4b5563;
                 }
                 .slick-dots li.slick-active button:before {
-                    color: #dc2626;
+                    color: #ffffff;
                 }
                 .slick-prev:before, .slick-next:before {
-                    color: #dc2626;
+                    color: #ffffff;
                 }
                 .slick-slide {
                     padding: 0 10px;
@@ -107,9 +107,9 @@ export const Projects = () => {
             <Slider {...settings}>
             {projects.map((project, index) => (
                 <div key={index} className="h-full py-4">
-                <div className="bg-[#0a0a0a] rounded-xl overflow-hidden border border-white/5 hover:border-red-500/50 transition-all duration-300 group h-full flex flex-col">
+                <div className="bg-[#0a0a0a] rounded-xl overflow-hidden border border-white/5 hover:border-white/50 transition-all duration-300 group h-full flex flex-col">
                     <div className="relative h-48 overflow-hidden">
-                    <div className="absolute inset-0 bg-red-900/10 group-hover:bg-transparent transition-colors z-10" />
+                    <div className="absolute inset-0 bg-white/5 group-hover:bg-transparent transition-colors z-10" />
                     <img
                         src={project.image}
                         alt={project.title}
@@ -118,7 +118,7 @@ export const Projects = () => {
                     </div>
                     
                     <div className="p-6 flex flex-col flex-grow">
-                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-red-500 transition-colors">
+                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-white transition-colors">
                         {project.title}
                     </h3>
                     <p className="text-gray-400 mb-6 flex-grow">
@@ -129,7 +129,7 @@ export const Projects = () => {
                         {project.tags.map((tag, i) => (
                         <span 
                             key={i} 
-                            className="text-xs px-3 py-1 bg-red-500/10 text-red-400 rounded-full border border-red-500/20"
+                            className="text-xs px-3 py-1 bg-white/10 text-gray-300 rounded-full border border-white/20"
                         >
                             {tag}
                         </span>
@@ -141,7 +141,7 @@ export const Projects = () => {
                         <Github className="w-4 h-4" />
                         Code
                         </a>
-                        <a href={project.live} className="flex items-center gap-2 text-sm text-red-500 hover:text-red-400 transition-colors">
+                        <a href={project.live} className="flex items-center gap-2 text-sm text-white hover:text-gray-300 transition-colors">
                         <ExternalLink className="w-4 h-4" />
                         Live Demo
                         </a>
