@@ -25,7 +25,7 @@ export const Hero = () => {
           transition={{ duration: 0.8 }}
         >
           <h2 className="text-white font-semibold tracking-wide uppercase text-sm md:text-base mb-4">
-            Hello, World! I am
+            Hi, I am Edgar Zapata
           </h2>
         </motion.div>
         
@@ -44,8 +44,8 @@ export const Hero = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-10 leading-relaxed"
         >
-          Building digital experiences with clean code and modern technologies. 
-          Focused on creating fluid, interactive, and performant web applications.
+          Turning ideas into functional and scalable digital products. 
+          Passionate about clean code, backend architecture, and seamless user experiences.
         </motion.p>
 
         <motion.div

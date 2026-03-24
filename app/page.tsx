@@ -22,14 +22,14 @@ export default function App() {
           width: 10px;
         }
         ::-webkit-scrollbar-track {
-          background: #7f1d1d;
+          background: #ffffff;
         }
         ::-webkit-scrollbar-thumb {
-          background: #dc2626;
+          background: #000000;
           border-radius: 5px;
         }
         ::-webkit-scrollbar-thumb:hover {
-          background: #b91c1c;
+          background: #ffffff;
         }
         body {
           cursor: none; /* Hide default cursor for the custom one */

@@ -20,22 +20,22 @@ export const About = () => {
           
           <div className="w-full md:w-1/2 text-left">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              About <span className="text-black">Me</span>
+              About Me
             </h2>
             <p className="text-gray-400 text-lg mb-6 leading-relaxed">
-              I am a passionate software engineer with a deep love for creating seamless digital experiences. With years of experience in full-stack development, I specialize in building efficient, scalable, and user-friendly web applications.
+              I am a Systems Engineering student and Full Stack Developer passionate about building functional and efficient web applications. My experience includes developing administrative systems, creating APIs, and working with modern technologies like Laravel, Vue.js, and Flutter.
             </p>
             <p className="text-gray-400 text-lg mb-8 leading-relaxed">
-              My journey in coding started with a curiosity for how things work on the internet, which quickly turned into a career obsession. I thrive on solving complex problems and turning innovative ideas into reality through code.
+              I enjoy learning new technologies, solving real-world problems, and continuously improving my skills as a developer. My goal is to grow professionally while contributing to impactful software projects.
             </p>
             
             <div className="grid grid-cols-2 gap-6">
               <div>
-                <h3 className="text-4xl font-bold text-white mb-2">5+</h3>
+                <h3 className="text-4xl font-bold text-white mb-2">2+</h3>
                 <p className="text-gray-300 uppercase text-sm tracking-wider">Years Experience</p>
               </div>
               <div>
-                <h3 className="text-4xl font-bold text-white mb-2">50+</h3>
+                <h3 className="text-4xl font-bold text-white mb-2">5+</h3>
                 <p className="text-gray-300 uppercase text-sm tracking-wider">Projects Completed</p>
               </div>
             </div>

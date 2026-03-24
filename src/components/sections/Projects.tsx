@@ -80,7 +80,7 @@ export const Projects = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
-            Featured <span className="text-black">Projects</span>
+            Featured Projects
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto text-lg">
             A selection of my recent work, ranging from web applications to system tools.

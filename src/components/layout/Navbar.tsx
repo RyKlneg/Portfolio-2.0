@@ -36,16 +36,9 @@ export const Navbar = () => {
     >
       <div className="absolute bottom-0 left-0 h-[1px] bg-white transition-all duration-100 ease-out" style={{ width: `${scrollProgress * 100}%` }} />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          <div className="flex-shrink-0 flex items-center">
-            <a href="#" className="flex items-center gap-2 text-white font-bold text-xl">
-              <Code2 className="w-8 h-8" />
-              <span>DEV.PORTFOLIO</span>
-            </a>
-          </div>
-          
+        <div className="flex items-center justify-center h-16 relative">
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
+            <div className="flex items-baseline space-x-4">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
@@ -58,7 +51,7 @@ export const Navbar = () => {
             </div>
           </div>
           
-          <div className="md:hidden">
+          <div className="md:hidden absolute right-0">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-300 hover:text-white focus:outline-none"
