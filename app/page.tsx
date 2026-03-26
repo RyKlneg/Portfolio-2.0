@@ -12,7 +12,7 @@ import { CustomCursor } from "@/src/components/effects/CustomCursor";
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-black text-white selection:bg-red-500/30 selection:text-red-200 cursor-none">
+    <div className="min-h-screen bg-black text-white selection:bg-gray-500/30 selection:text-gray-200 cursor-none">
       <style>{`
         html {
           scroll-behavior: smooth;
