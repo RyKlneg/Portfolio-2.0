@@ -25,7 +25,7 @@ export const Contact = () => {
                 </div>
                 <div>
                   <h3 className="text-white font-semibold mb-1">Email</h3>
-                  <p className="text-gray-400">hello@portfolio.dev</p>
+                  <p className="text-gray-400">nexarcodenext@gmail.com</p>
                 </div>
               </div>
               
@@ -35,7 +35,7 @@ export const Contact = () => {
                 </div>
                 <div>
                   <h3 className="text-white font-semibold mb-1">Phone</h3>
-                  <p className="text-gray-400">+1 (555) 123-4567</p>
+                  <p className="text-gray-400"> (+52) 99-34-35-62-83</p>
                 </div>
               </div>
               
@@ -45,7 +45,7 @@ export const Contact = () => {
                 </div>
                 <div>
                   <h3 className="text-white font-semibold mb-1">Location</h3>
-                  <p className="text-gray-400">San Francisco, CA</p>
+                  <p className="text-gray-400">Villahermosa, Tabasco</p>
                 </div>
               </div>
             </div>

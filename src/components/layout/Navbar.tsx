@@ -36,7 +36,17 @@ export const Navbar = () => {
     >
       <div className="absolute bottom-0 left-0 h-[1px] bg-white transition-all duration-100 ease-out" style={{ width: `${scrollProgress * 100}%` }} />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-center h-16 relative">
+        <div className="flex items-center justify-between h-20 relative">
+          {/* Logo en la izquierda */}
+          <div className="flex-shrink-0">
+            <img 
+              src="/LOGO.png" 
+              alt="Logo" 
+              className="h-16 w-16 object-contain hover:scale-110 hover:drop-shadow-lg transition-all duration-300 cursor-pointer" 
+            />
+          </div>
+
+          {/* Links en el centro */}
           <div className="hidden md:block">
             <div className="flex items-baseline space-x-4">
               {navLinks.map((link) => (
@@ -51,6 +61,7 @@ export const Navbar = () => {
             </div>
           </div>
           
+          {/* Menú móvil en la derecha */}
           <div className="md:hidden absolute right-0">
             <button
               onClick={() => setIsOpen(!isOpen)}

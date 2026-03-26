@@ -12,9 +12,9 @@ export const About = () => {
             <div className="absolute inset-0 bg-white rounded-2xl rotate-6 opacity-20 group-hover:rotate-12 transition-transform duration-500"></div>
             <div className="absolute inset-0 bg-white/5 rounded-2xl -rotate-6 opacity-20 group-hover:-rotate-12 transition-transform duration-500"></div>
             <img
-              src="https://images.unsplash.com/photo-1638983752157-052aa1f15bf1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBkZXZlbG9wZXIlMjBwb3J0cmFpdCUyMGRhcmslMjBiYWNrZ3JvdW5kfGVufDF8fHx8MTc3MDIyNjIxNXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+              src="/LOGO.png"
               alt="Profile"
-              className="relative w-full rounded-2xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-500 object-cover aspect-[4/5]"
+              className="relative w-full rounded-2xl shadow-2xl grayscale hover:grayscale-0 hover:scale-105 hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] transition-all duration-500 object-cover aspect-[4/5]"
             />
           </div>
           
