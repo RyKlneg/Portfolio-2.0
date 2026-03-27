@@ -48,7 +48,7 @@ export const Projects = () => {
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 4000,
+    autoplaySpeed: 5000,
     arrows: true,
     responsive: [
       {
@@ -63,7 +63,7 @@ export const Projects = () => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          arrows: false // Hide arrows on mobile for cleaner UI
+          arrows: false
         }
       }
     ]
@@ -107,7 +107,7 @@ export const Projects = () => {
             <Slider {...settings}>
             {projects.map((project, index) => (
                 <div key={index} className="h-full py-4">
-                <div className="bg-[#0a0a0a] rounded-xl overflow-hidden border border-white/5 hover:border-white/50 transition-all duration-300 group h-full flex flex-col">
+                <div className="bg-[#0a0a0a] rounded-xl overflow-hidden border border-white/5 hover:border-white/50 transition-all duration-300 group h-full flex flex-col min-h-[550px]">
                     <div className="relative h-48 overflow-hidden">
                     <div className="absolute inset-0 bg-white/5 group-hover:bg-transparent transition-colors z-10" />
                     <img

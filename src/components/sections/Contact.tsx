@@ -12,7 +12,7 @@ export const Contact = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24">
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Let is Work <span className="text-black">Together</span>
+              Let is Work Together
             </h2>
             <p className="text-gray-400 text-lg mb-12">
               Have a project in mind or want to discuss the latest tech? I am always open to new opportunities and interesting conversations.

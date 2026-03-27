@@ -2,3 +2,21 @@
 @source '../**/*.{js,ts,jsx,tsx}';
 
 @import 'tw-animate-css';
+
+/* Estilizar scrollbar para el carrusel */
+.carousel-scrollbar::-webkit-scrollbar {
+  height: 4px;
+}
+
+.carousel-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.carousel-scrollbar::-webkit-scrollbar-thumb {
+  background: #1f2937;
+  border-radius: 2px;
+}
+
+.carousel-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #374151;
+}

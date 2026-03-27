@@ -20,6 +20,7 @@ export default function App() {
         /* Custom scrollbar */
         ::-webkit-scrollbar {
           width: 10px;
+          background: #ffffff;
         }
         ::-webkit-scrollbar-track {
           background: #ffffff;

@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { Section } from "@/src/components/ui/Section";
 import { motion } from "framer-motion";
 
@@ -26,6 +26,8 @@ const skills = [
 ];
 
 export const Skills = () => {
+  const duplicatedSkills = [...skills, ...skills];
+
   return (
     <Section id="skills" className="bg-black py-20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -44,7 +46,47 @@ export const Skills = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8">
+        {/* Carrusel infinito para móviles */}
+        <div className="md:hidden overflow-hidden mb-8 carousel-scrollbar">
+          <motion.div
+            className="flex gap-6"
+            animate={{ x: ["0%", "-50%"] }}
+            transition={{
+              duration: 20,
+              repeat: Infinity,
+              ease: "linear",
+            }}
+            onHoverStart={(e) => {
+              // Pausar animación al hacer hover
+              (e.target as any).style.animationPlayState = "paused";
+            }}
+            onHoverEnd={(e) => {
+              // Reanudar animación
+              (e.target as any).style.animationPlayState = "running";
+            }}
+          >
+            {duplicatedSkills.map((skill, index) => (
+              <motion.div
+                key={index}
+                className="flex-shrink-0 w-24 flex flex-col items-center justify-center p-4 bg-white/5 rounded-2xl border border-white/5 hover:border-white/50 hover:bg-white/10 transition-all duration-300 group"
+              >
+                <div className="w-12 h-12 mb-2 relative flex items-center justify-center">
+                  <img 
+                    src={skill.icon} 
+                    alt={skill.name} 
+                    className="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <span className="text-gray-400 group-hover:text-white font-medium transition-colors text-xs text-center">
+                  {skill.name}
+                </span>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+
+        {/* Grid para tablets y desktop */}
+        <div className="hidden md:grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8">
           {skills.map((skill, index) => (
             <motion.div
               key={index}
