@@ -7,35 +7,31 @@ import { ExternalLink, Github, Code2 } from "lucide-react";
 
 const projects = [
   {
-    title: "E-Commerce Platform",
-    description: "A full-featured online store built with Next.js, Stripe integration, and a headless CMS backend.",
-    tags: ["React", "Next.js", "Stripe", "Tailwind"],
-    image: "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&q=80",
-    github: "#",
-    live: "#"
+    title: "D-Antojo",
+    description: "D-antojo is an online bakery offering high-quality, custom desserts with easy ordering and home delivery.",
+    tags: ["React", "Next.js", "Stripe", "Tailwind", "Whatsapp API", "framer-motion"],
+    image: "/images/dantojo.png",
+    live: "https://d-antojo.vercel.app/"
   },
   {
-    title: "AI Task Manager",
-    description: "Smart productivity app using OpenAI API to prioritize and categorize daily tasks automatically.",
-    tags: ["TypeScript", "OpenAI", "Node.js", "MongoDB"],
-    image: "https://images.unsplash.com/photo-1661956602116-aa6865609028?w=800&q=80",
-    github: "#",
-    live: "#"
+    title: "Weather-App",
+    description: "Weather App is a mobile application that provides real-time weather updates, forecasts, and climate information, helping users plan their daily activities with accurate and easy-to-read data.",
+    tags: ["React", "JavaScript", "API", "Tailwind", "framer-motion"],
+    image: "/images/weather.png",
+    live: "https://weather-app-two-weld-83.vercel.app/"
   },
   {
-    title: "Crypto Dashboard",
-    description: "Real-time cryptocurrency tracker with interactive charts and portfolio management features.",
-    tags: ["React", "Recharts", "WebSocket", "Redux"],
-    image: "https://images.unsplash.com/photo-1621761191319-c6fb62004040?w=800&q=80",
-    github: "#",
-    live: "#"
+    title: "Calculator App",
+    description: "Calculate App is a mobile application that provides real-time weather updates, forecasts, and climate information, helping users plan their daily activities with accurate and easy-to-read data.",
+    tags: ["React", "JavaScript", "Tailwind", "framer-motion"],
+    image: "/images/calculate.png",
+    live: "https://calculate-black.vercel.app/"
   },
   {
-    title: "Social Media App",
-    description: "A community platform for developers to share snippets and discuss code.",
-    tags: ["Vue", "Firebase", "SCSS", "Jest"],
-    image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&q=80",
-    github: "#",
+    title: "Talentix",
+    description: "Talentix is a job board platform currently in development that aims to connect job seekers with employers, making it easier to discover and apply for job opportunities.",
+    tags: ["Vue", "Laravel", "MySQL",],
+    image: "/images/talentix.png",
     live: "#"
   }
 ];
@@ -89,7 +85,7 @@ export const Projects = () => {
 
         {/* Carousel Container */}
         <div className="mx-auto px-4">
-            <style>{`
+          <style>{`
                 .slick-dots li button:before {
                     color: #4b5563;
                 }
@@ -103,54 +99,50 @@ export const Projects = () => {
                     padding: 0 10px;
                 }
             `}</style>
-            
-            <Slider {...settings}>
+
+          <Slider {...settings}>
             {projects.map((project, index) => (
-                <div key={index} className="h-full py-4">
+              <div key={index} className="h-full py-4">
                 <div className="bg-[#0a0a0a] rounded-xl overflow-hidden border border-white/5 hover:border-white/50 transition-all duration-300 group h-full flex flex-col min-h-[550px]">
-                    <div className="relative h-48 overflow-hidden">
+                  <div className="relative h-48 overflow-hidden">
                     <div className="absolute inset-0 bg-white/5 group-hover:bg-transparent transition-colors z-10" />
                     <img
-                        src={project.image}
-                        alt={project.title}
-                        className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
                     />
-                    </div>
-                    
-                    <div className="p-6 flex flex-col flex-grow">
+                  </div>
+
+                  <div className="p-6 flex flex-col flex-grow">
                     <h3 className="text-xl font-bold text-white mb-3 group-hover:text-white transition-colors">
-                        {project.title}
+                      {project.title}
                     </h3>
                     <p className="text-gray-400 mb-6 flex-grow">
-                        {project.description}
+                      {project.description}
                     </p>
-                    
+
                     <div className="flex flex-wrap gap-2 mb-6">
-                        {project.tags.map((tag, i) => (
-                        <span 
-                            key={i} 
-                            className="text-xs px-3 py-1 bg-white/10 text-gray-300 rounded-full border border-white/20"
+                      {project.tags.map((tag, i) => (
+                        <span
+                          key={i}
+                          className="text-xs px-3 py-1 bg-white/10 text-gray-300 rounded-full border border-white/20"
                         >
-                            {tag}
+                          {tag}
                         </span>
-                        ))}
+                      ))}
                     </div>
-                    
+
                     <div className="flex items-center gap-4 mt-auto">
-                        <a href={project.github} className="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors">
-                        <Github className="w-4 h-4" />
-                        Code
-                        </a>
-                        <a href={project.live} className="flex items-center gap-2 text-sm text-white hover:text-gray-300 transition-colors">
+                      <a href={project.live} className="flex items-center gap-2 text-sm text-white hover:text-gray-300 transition-colors">
                         <ExternalLink className="w-4 h-4" />
                         Live Demo
-                        </a>
+                      </a>
                     </div>
-                    </div>
+                  </div>
                 </div>
-                </div>
+              </div>
             ))}
-            </Slider>
+          </Slider>
         </div>
       </div>
     </Section>
