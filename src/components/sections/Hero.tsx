@@ -76,9 +76,7 @@ export const Hero = () => {
           className="mt-12 flex items-center justify-center gap-6"
         >
           {[
-            { icon: Github, href: "#" },
-            { icon: Linkedin, href: "#" },
-            { icon: Mail, href: "#" }
+            { icon: Github, href: "https://github.com/RyKlneg" },
           ].map((item, index) => (
             <a
               key={index}
