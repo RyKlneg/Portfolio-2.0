@@ -33,6 +33,13 @@ const projects = [
     tags: ["Vue", "Laravel", "MySQL",],
     image: "/images/talentix.png",
     live: "#"
+  },
+  {
+    title: "Vulpis-Clean",
+    description: "Vulpis-Clean is an online laundry management system that digitizes manual processes, reduces operational errors, and provides greater administrative control for laundry businesses.",
+    tags: ["Vue", "Laravel", "PostgreSQL(Supabase)", "Render", "Chart.js"],
+    image: "/images/vulpisclean.png",
+    live: "https://vulpisclean.onrender.com/panel"
   }
 ];
 
